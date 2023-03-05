@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read in the CSV file
+data = pd.read_csv("INSERTFILEHERE.csv")
+
+# Create a bar graph of the electric vehicle types and their counts
+data["Electric Vehicle Type"].value_counts().plot(kind="bar")
+
+# Add axis labels and a title
+plt.xlabel("Electric Vehicle Type")
+plt.ylabel("Count")
+plt.title("Electric Vehicle Types and Counts")
+
+# Display the graph
+plt.show()
+
